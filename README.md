@@ -12,7 +12,6 @@ An app that provides real-time data on your favorite restaurant's availability, 
 
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Food & Drink / Social
 - **Mobile:** For ease of access and quick actions, mobile will be the dominant platform for finding open restaurants with low wait times on a moments notice or for booking a reservation and browsing a menu on your own time and own device.
 - **Story:** Giving notice to long wait times and allowing for pre-ordering will streamline user experience and restaurant efficiency, making for a more enjoyable experience for short notice dinners or reservations made days in advance.
@@ -25,7 +24,9 @@ An app that provides real-time data on your favorite restaurant's availability, 
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-* A way to measure and report dynamic traffic data for each restaurant via Google Places API (or similar)
+* A way to measure and report dynamic traffic data for each restaurant via Google Places API (or similar API)
+* List view on home screen (Map view comes later)
+    * filters for list view based on proximity (default)
 * A way to search for restaurants
 * A way to estimate wait times based on party size
 * A way to book reservations for one's party size
@@ -35,7 +36,6 @@ An app that provides real-time data on your favorite restaurant's availability, 
 * A way for users to "favorite" restaurants to add them to their profile
 
 **Optional Nice-to-have Stories**
-
 * A Google Maps view of nearby restaurants, their Yelp reviews, estimated wait time, and a preview of their menu. A compliment to search function.
 * Filter search results by rating, distance, party size, etc.
 * Daily/Weekly deals unique to each restaurant advertised on its main page.
@@ -44,18 +44,54 @@ An app that provides real-time data on your favorite restaurant's availability, 
 * Add highest and lowest traffic days/times for each location.
 * Implement a rewards system similar to Opentable to promote trying new restaurants as well as earning rewards for repeat customers.
 * Allow check splitting within the app via Splitwise API (or similar)
-* Allow users to invite other users to their reservation and have them RSVP
+* Allow users to invite other users to their reservation and have them RSVP. This requires a friends list system.
+* Display how many favorites each restaurant has by all users on the platform
+* After eating at a restaurant, allow users to rate on a 1-5 star basis and show that for each restaurant
+* Let users save their favorite meals for each restaurant they visit
 
 ### 2. Screen Archetypes
 
+* Log In Screen
+* Sign Up Screen
+* Home Feed
+    * Search bar
+* Favorites Feed
+* Restaurant Detaied View
+    * Current traffic inside of restaurant
+    * Estimated wait times
+    * Menu
+* Make Reservation
+    * Dine in
+        * Menu viewing
+        * Order placing (if <= x minutes till seated)
+        * Count down till seated
+    * Take out
+        * Menu viewing and immediate order placing
+        * Count down till food ready for pickup
+* Profile
+    * Log out
+    * Reset password
+
+
+### 3. Navigation
+
+**Tab Navigation** (Tab to Screen)
+
+* Home Feed
+* Favorite Restaurants
+* My Reservations
+* My Profile
+
+**Flow Navigation** (Screen to Screen)
+
 * Home Screen showing Login
     * Links to Account Sign up
-* Home Screen (after authentication) Map view or list view of nearby restaurants (or both)
+* Home Screen (after authentication) List view of nearby restaurants (Map later)
     * Click on any restaurant for more information on it and to book
     * Filter by food type, closing soon, etc.
     * Search bar at the top
     * Bottom nav bar showing current home screen, favorites tab, my future reservations, and my account.
-* Favorites tab (Maps or list view)
+* Favorites tab (List view first)
     * List view of your favorite restaurants and some basic info about them
         * Click on it to go the same detailed view from the home screen
 * My Reservations
@@ -64,24 +100,7 @@ An app that provides real-time data on your favorite restaurant's availability, 
 * My profile
     * Reset password
     * View your favorite restaurants list
-
-### 3. Navigation
-
-**Tab Navigation** (Tab to Screen)
-
-* Home Screen
-* Favorites Tab
-* My Reservations
-* My Profile
-
-**Flow Navigation** (Screen to Screen)
-
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+    * Log out
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
